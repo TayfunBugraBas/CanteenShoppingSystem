@@ -15,39 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CanteenShoppingSystem.cpp">
+    <ClCompile Include="Core\CanteenShoppingSystem.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="Urun.cpp">
+    <ClCompile Include="Core\CoreBussines\Urun.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="Employee.cpp">
+    <ClCompile Include="Core\CoreBussines\Employee.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="Manager.cpp">
+    <ClCompile Include="Core\CoreBussines\Manager.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="FileWorks.cpp">
+    <ClCompile Include="Core\DataAccess\FileWorks.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="StoragePersonel.cpp">
+    <ClCompile Include="Business\Concrete\StoragePersonel.cpp">
+      <Filter>Kaynak Dosyalar</Filter>
+    </ClCompile>
+    <ClCompile Include="Business\Concrete\Cashier.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Urun.h">
+    <ClInclude Include="Core\CoreBussines\Urun.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
-    <ClInclude Include="Employee.h">
+    <ClInclude Include="Core\CoreBussines\Employee.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
-    <ClInclude Include="Manager.h">
+    <ClInclude Include="Core\CoreBussines\Manager.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
-    <ClInclude Include="FileWorks.h">
+    <ClInclude Include="Core\DataAccess\FileWorks.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
-    <ClInclude Include="StoragePersonel.h">
+    <ClInclude Include="Business\Concrete\StoragePersonel.h">
+      <Filter>Üst Bilgi Dosyaları</Filter>
+    </ClInclude>
+    <ClInclude Include="Business\Concrete\Cashier.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
   </ItemGroup>

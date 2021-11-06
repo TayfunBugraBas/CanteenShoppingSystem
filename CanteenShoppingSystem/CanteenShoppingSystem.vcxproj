@@ -139,19 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CanteenShoppingSystem.cpp" />
-    <ClCompile Include="Employee.cpp" />
-    <ClCompile Include="FileWorks.cpp" />
-    <ClCompile Include="Manager.cpp" />
-    <ClCompile Include="StoragePersonel.cpp" />
-    <ClCompile Include="Urun.cpp" />
+    <ClCompile Include="Core\CanteenShoppingSystem.cpp" />
+    <ClCompile Include="Business\Concrete\Cashier.cpp" />
+    <ClCompile Include="Core\CoreBussines\Employee.cpp" />
+    <ClCompile Include="Core\DataAccess\FileWorks.cpp" />
+    <ClCompile Include="Core\CoreBussines\Manager.cpp" />
+    <ClCompile Include="Business\Concrete\StoragePersonel.cpp" />
+    <ClCompile Include="Core\CoreBussines\Urun.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Employee.h" />
-    <ClInclude Include="FileWorks.h" />
-    <ClInclude Include="Manager.h" />
-    <ClInclude Include="StoragePersonel.h" />
-    <ClInclude Include="Urun.h" />
+    <ClInclude Include="Business\Concrete\Cashier.h" />
+    <ClInclude Include="Core\CoreBussines\Employee.h" />
+    <ClInclude Include="Core\DataAccess\FileWorks.h" />
+    <ClInclude Include="Core\CoreBussines\Manager.h" />
+    <ClInclude Include="Business\Concrete\StoragePersonel.h" />
+    <ClInclude Include="Core\CoreBussines\Urun.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
