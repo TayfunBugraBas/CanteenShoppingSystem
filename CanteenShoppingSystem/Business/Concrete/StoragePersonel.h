@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include "../../Core/CoreBussines/Employee.h"
-#include "../../Core/CoreBussines/Urun.h"
+#include "../../Core/CoreBusiness/Employee.h"
+#include "../../Core/DataAccess/FileWorks.h"
+#include "../../Core/CoreBusiness/Urun.h"
 
 using namespace std;
 

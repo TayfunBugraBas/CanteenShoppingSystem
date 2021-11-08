@@ -18,13 +18,13 @@
     <ClCompile Include="Core\CanteenShoppingSystem.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="Core\CoreBussines\Urun.cpp">
+    <ClCompile Include="Core\CoreBusiness\Urun.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="Core\CoreBussines\Employee.cpp">
+    <ClCompile Include="Core\CoreBusiness\Employee.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
-    <ClCompile Include="Core\CoreBussines\Manager.cpp">
+    <ClCompile Include="Core\CoreBusiness\Manager.cpp">
       <Filter>Kaynak Dosyalar</Filter>
     </ClCompile>
     <ClCompile Include="Core\DataAccess\FileWorks.cpp">
@@ -38,13 +38,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core\CoreBussines\Urun.h">
+    <ClInclude Include="Core\CoreBusiness\Urun.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
-    <ClInclude Include="Core\CoreBussines\Employee.h">
+    <ClInclude Include="Core\CoreBusiness\Employee.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
-    <ClInclude Include="Core\CoreBussines\Manager.h">
+    <ClInclude Include="Core\CoreBusiness\Manager.h">
       <Filter>Üst Bilgi Dosyaları</Filter>
     </ClInclude>
     <ClInclude Include="Core\DataAccess\FileWorks.h">

@@ -2,8 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "../CoreBussines/Urun.h"
-#include "../CoreBussines/Manager.h"
+#include "../CoreBusiness/Urun.h"
+#include "../CoreBusiness/Manager.h"
+#include "../CoreBusiness/Employee.h"
 #include <istream>
 #include <string>
 #include <iostream>
@@ -16,7 +17,7 @@ public:
 
 	FileWorks();
 
-	void saveWorker();
+	void saveWorker(vector<Employee>& employee);
 
 	void saveUrun(vector<Urun>& urunler);
 
@@ -24,7 +25,7 @@ public:
 
 	void FillObject(vector<Urun>& urunler);
 
-	void fillWorker();
+	void fillWorker(vector<Employee>& employee);
 
 	void FindWorker(string worker);
 

@@ -1,7 +1,8 @@
 #pragma once
-#include "../../Core/CoreBussines/Employee.h"
-#include "../../Core/CoreBussines/Urun.h"
+#include "../../Core/CoreBusiness/Employee.h"
+#include "../../Core/CoreBusiness/Urun.h"
 #include "../../Core/DataAccess/FileWorks.h"
+
 
 
 class Cashier : public  Employee

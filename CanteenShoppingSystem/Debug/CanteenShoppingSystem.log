@@ -1,4 +1,3 @@
 ﻿  CanteenShoppingSystem.cpp
-  Urun.cpp
-  Kod Üretiliyor...
+D:\projects\CanteenShoppingSystem\CanteenShoppingSystem\Core\CanteenShoppingSystem.cpp(80): warning C4717: 'menu' : tüm denetim yollarında özyinelemelidir, işlev çalışma zamanı yığın taşmasına neden olacak
   CanteenShoppingSystem.vcxproj -> D:\projects\CanteenShoppingSystem\Debug\CanteenShoppingSystem.exe

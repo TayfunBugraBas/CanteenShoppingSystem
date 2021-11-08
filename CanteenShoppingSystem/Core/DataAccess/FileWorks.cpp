@@ -5,18 +5,18 @@ FileWorks::FileWorks()
 
 }
 
-void FileWorks::saveWorker()
+void FileWorks::saveWorker(vector<Employee>& employee)
 {
 	fstream file("Employee.txt", ios::app | ios::in | ios::out);
 	if (!file.is_open()) {
 		cout << "opsss... birseyler eksik!!!" << endl;
 	}
 	else {
-		/*for (auto employee : workers) {
+		for (auto emp : employee) {
 
-			file << employee.getName() << endl << employee.getRank() << endl << employee.getEmpId() << endl << employee.getSalary() << endl;
+			file << emp.getName() << endl << emp.getRank() << endl << emp.getEmpId() << endl << emp.getSalary() << endl;
 
-		}*/
+		}
 	}
 
 
@@ -71,8 +71,7 @@ void FileWorks::FillObject(vector<Urun>& urunler)
 	string _helperUrunId;
 	string _helperAmount;
 
-
-	int i;
+    unsigned int i;
 	string taker;
 	vector<string> objectHandler;
 
@@ -122,8 +121,49 @@ void FileWorks::FillObject(vector<Urun>& urunler)
 
 }
 
-void FileWorks::fillWorker()
+void FileWorks::fillWorker(vector<Employee>& employee)
 {
+	fstream file;
+	vector<string> workerHandler;
+	file.open("Employee.txt");
+
+
+	string helper;
+	string helperRank;
+	string helperName;
+
+	int empId=0 ;
+	double empSalary = 0.00;
+
+	string _empId;
+	string _empSalary;
+
+	while (getline(file, helper)) {
+
+		workerHandler.push_back(helper);
+
+	}
+
+	for (unsigned int i = 0; i < workerHandler.size(); i++) {
+
+		helperName = workerHandler[i];
+		i++;
+		helperRank = workerHandler[i];
+		i++;
+
+		_empId = workerHandler[i];
+		stringstream changer(_empId);
+		changer >> empId;
+		i++;
+
+		_empSalary = workerHandler[i];
+		empSalary = stod(_empSalary);
+
+	}
+	Employee helperEmployee(helperRank, helperName, empId, empSalary);
+
+	employee.push_back(helperEmployee);
+
 }
 
 void FileWorks::FindWorker(string worker)

@@ -1,0 +1,8 @@
+TYFN
+Cashier
+1
+3785.3
+bgr
+cashier
+2
+4785.2
