@@ -1,8 +1,8 @@
-TYFN
+fsd
 Cashier
-1
-3785.3
+4
+4578
 bgr
-cashier
-2
-4785.2
+Cashier
+4
+5000

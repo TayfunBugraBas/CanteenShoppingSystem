@@ -18,7 +18,7 @@ public:
 	
 	void setProductPrice();
 
-	void setWorkerSalary(Employee employee, double newsalary);
+	void setWorkerSalary(string employee, double newsalary);
 
     void newWorker(Employee employee);
 

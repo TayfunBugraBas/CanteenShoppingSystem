@@ -13,25 +13,31 @@ void Manager::setProductPrice()
 }
 
 
-void Manager::setWorkerSalary(Employee employee, double newsalary)
+void Manager::setWorkerSalary(string employee, double newsalary)
 {
-	vemployee.clear();
+	
 	fileHelper.fillWorker(vemployee);
+	vector<Employee> emp;
+
+	emp = vemployee;
 
 	for (unsigned int i = 0; i < vemployee.size(); i++) {
 
-		if(employee.getName() == vemployee[i].getName())
+		
+		if(employee == vemployee[i].getName())
 		{
-			employee.setSalary(newsalary);
+			vemployee.at(i).setSalary(newsalary);
 
-			vemployee.push_back(employee);
+		
 
-			fileHelper.saveWorker(vemployee);
+			
 		}
-
-
+		
+		
 	}
-
+	
+	remove("Employee.txt");
+	fileHelper.saveWorker(vemployee);
 
 }
 

@@ -36,37 +36,55 @@ void menu() {
             cin >> i;
             if (i == 1 )
             {
-                cout << "Enter rank";
-                cin >> rankOfEmp;
+                rankOfEmp = "Cashier";
                 cout << "Enter name";
-                cin >> nameOfThing;
+                   cin >> nameOfThing;
                 cout << "enter id";
-                cin >> idOfThing;
+                   cin >> idOfThing;
                 cout << "enter Salary";
-                cin >> salaryOfEmp;
+                   cin >> salaryOfEmp;
 
-                Cashier cashier(rankOfEmp, nameOfThing, idOfThing, salaryOfEmp);
-                manager.newWorker(cashier);
-                cout << "Completed Successfully" << endl;
-                system("CLS");
+                      Cashier cashier(rankOfEmp, nameOfThing, idOfThing, salaryOfEmp);
+                             manager.newWorker(cashier);
+                       cout << "Completed Successfully" << endl;
+                   system("CLS");
                 menu();
             }
             else if (i == 2) {
 
+                rankOfEmp = "StoragePersonel";
+                cout << "Enter name";
+                   cin >> nameOfThing;
+                cout << "enter id";
+                   cin >> idOfThing;
+                cout << "enter Salary";
+                   cin >> salaryOfEmp;
+
+                     StoragePersonel storagePersonel(rankOfEmp, nameOfThing, idOfThing, salaryOfEmp);
+                           manager.newWorker(storagePersonel);
+                      cout << "Completed Successfully" << endl;
+                   system("CLS");
+                menu();
             }
             else {
-                cout << "something gone wrong returning main menu" << endl;
-                system("CLS");
+                     cout << "something gone wrong returning main menu" << endl;
+                   system("CLS");
                 menu();
             }
 
         }
         else if (i == 3) {
+            cout << "Please Enter Your Workers Name Correctly" << endl;
+              cin >> nameOfThing;
+                  cout << "Enter new Salary of Worker" << endl;
+                    cin >> salaryOfEmp;
+                  manager.setWorkerSalary(nameOfThing, salaryOfEmp);/*replace in file bak*/
+
 
         }
         else {
-            cout << "something gone wrong returning main menu" << endl;
-            system("CLS");
+                 cout << "something gone wrong returning main menu" << endl;
+              system("CLS");
             menu();
         }
        
@@ -79,7 +97,7 @@ void menu() {
     }
     
 }
-
+/*Hatalı girişte sonsuz döngü error bak*/
 
 int main()
 {
