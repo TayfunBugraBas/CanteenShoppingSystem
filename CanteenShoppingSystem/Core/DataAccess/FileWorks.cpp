@@ -170,12 +170,36 @@ void FileWorks::fillWorker(vector<Employee>& employee)
 
 void FileWorks::FindWorker(string worker)
 {
+	vector<Employee> helper;
+	fillWorker(helper);
+
+	for (auto find : helper) {
+
+		if (worker == find.getName()) {
+			cout << "Calisan Bulundu " << endl;
+
+			cout << find.getName() << " " << find.getRank() << " " << find.getEmpId() << " " << find.getSalary() << endl;
+		}
+
+	}
+
+
 }
 
 void FileWorks::findUrun(string urun)
 {
-	fstream file("Storage.txt", ios::app | ios::in | ios::out);
+	vector<Urun> helper;
+	FillObject(helper);
 
+	for (auto find : helper) {
 
+		if (urun == find.getIsim())
+		{
+			cout << "Urun bulundu" << endl;
+
+			cout << find.getIsim() << "--Kategori: " << find.getKategori() << "--Tipi:" << find.getTipi() << "--Fiyat:" << find.getFiyat() << "--StokAdeti:" << find.getAmount() << "--ID:" << find.getId() << endl;
+		}
+
+	}
 
 }

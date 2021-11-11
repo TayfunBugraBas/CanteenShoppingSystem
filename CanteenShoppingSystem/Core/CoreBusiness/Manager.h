@@ -3,7 +3,7 @@
 #include "Employee.h"
 #include "../DataAccess/FileWorks.h"
 #include <vector>
-
+#include "Urun.h"
 
 
 
@@ -15,8 +15,10 @@ public:
 	Manager();
 
 	vector<Employee> vemployee;
+	vector<Urun> vurun;
+
 	
-	void setProductPrice();
+	void setProductPrice(string urun, double newPrice);
 
 	void setWorkerSalary(string employee, double newsalary);
 

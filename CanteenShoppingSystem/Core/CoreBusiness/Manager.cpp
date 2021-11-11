@@ -6,9 +6,18 @@ Manager::Manager()
 {
 }
 
-void Manager::setProductPrice()
+void Manager::setProductPrice(string urun, double newPrice)
 {
+	fileHelper.FillObject(vurun);
 
+	for (unsigned int i = 0; i < vurun.size(); i++) {
+		if (urun == vurun[i].getIsim()) {
+			vurun.at(i).setFiyat(newPrice);
+		}
+		
+	}
+	remove("Storage.txt");
+	fileHelper.saveUrun(vurun);
 
 }
 
@@ -17,22 +26,14 @@ void Manager::setWorkerSalary(string employee, double newsalary)
 {
 	
 	fileHelper.fillWorker(vemployee);
-	vector<Employee> emp;
-
-	emp = vemployee;
-
+	
 	for (unsigned int i = 0; i < vemployee.size(); i++) {
 
 		
 		if(employee == vemployee[i].getName())
 		{
 			vemployee.at(i).setSalary(newsalary);
-
-		
-
-			
 		}
-		
 		
 	}
 	

@@ -8,6 +8,7 @@ void Cashier::sellUrun(Urun urun)
 	fileworkertwo.FillObject(urunler);
 	int i = 0;
 	int _amount;
+	
 
 	
 
@@ -19,20 +20,13 @@ void Cashier::sellUrun(Urun urun)
 
 				   _amount = _amount - 1;/*Deðiþebilir Kýsým*/
 
-				       urun.setAmount(_amount);
+				       _urun.setAmount(_amount);
 
-				urunler.push_back(_urun);
-
+					   remove("Storage.txt");
 			 fileworkertwo.saveUrun(urunler);
-
-				
-
 			}
-
-
+			/*toplam fiyat eklemeyi unutma*/
 		}
-
-
 }
 
 void Cashier::givebackUrun(Urun urun)
@@ -52,18 +46,16 @@ void Cashier::givebackUrun(Urun urun)
 
 				  _amount = _amount + 1;/*Deðiþebilir Kýsým*/
 
-				      urun.setAmount(_amount);
+				      _urun.setAmount(_amount);
 
-
-				 urunler.push_back(_urun);
-
+					  remove("Storage.txt");
 			 fileworkertwo.saveUrun(urunler);
 
 			
 
 			}
 
-
+			/*toplam fiyat eklemeyi unutma*/
 		}
 
 }
