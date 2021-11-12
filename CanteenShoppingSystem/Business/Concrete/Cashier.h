@@ -2,6 +2,7 @@
 #include "../../Core/CoreBusiness/Employee.h"
 #include "../../Core/CoreBusiness/Urun.h"
 #include "../../Core/DataAccess/FileWorks.h"
+using namespace std;
 
 
 
@@ -22,6 +23,7 @@ public:
 	void sellUrun(Urun urun);
 
 	void givebackUrun(Urun urun);
+
 
 
 
