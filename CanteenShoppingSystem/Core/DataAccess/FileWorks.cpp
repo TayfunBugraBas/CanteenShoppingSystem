@@ -33,7 +33,7 @@ void FileWorks::saveUrun(vector<Urun>& urunler)
 	else {
 		for (auto specs : urunler) {
 
-			file << specs.getIsim() << endl << specs.getTipi() << endl << specs.getKategori() << endl << specs.getId() << endl << specs.getFiyat() << endl;
+			file << specs.getIsim() << endl << specs.getTipi() << endl << specs.getKategori() << endl << specs.getId() << endl << specs.getFiyat() << endl << specs.getAmount() << endl;
 		}
 	}
 
@@ -91,23 +91,27 @@ void FileWorks::FillObject(vector<Urun>& urunler)
 		helperUrunIsmi = objectHandler[i];
 		i++;
 
-		helperUrunKategori = objectHandler[i];
-		i++;
-
 		helperUrunTipi = objectHandler[i];
 		i++;
 
-		_helperFiyat = objectHandler[i];
-		helperFiyat = stod(_helperFiyat);
-
-		_helperAmount = objectHandler[i];
-		stringstream  degistir(_helperAmount);
-		degistir >> helperAmount;
+		helperUrunKategori = objectHandler[i];
 		i++;
 
 		_helperUrunId = objectHandler[i];
 		stringstream xdegistir(_helperUrunId);
 		xdegistir >> helperUrunId;
+		i++;
+
+		_helperFiyat = objectHandler[i];
+		helperFiyat = stod(_helperFiyat);
+		i++;
+
+		_helperAmount = objectHandler[i];
+		stringstream  degistir(_helperAmount);
+		degistir >> helperAmount;
+		
+
+		
 
 		Urun helperUrun(helperUrunIsmi, helperUrunKategori, helperUrunTipi, helperFiyat, helperAmount, helperUrunId);
 

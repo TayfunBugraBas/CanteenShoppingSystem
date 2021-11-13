@@ -17,12 +17,13 @@ public:
 
 
 	}
+	Cashier();
 
 	vector<Urun> urunler;
 
-	void sellUrun(Urun urun);
+	void sellUrun(string urun);
 
-	void givebackUrun(Urun urun);
+	void givebackUrun(string urun);
 
 
 

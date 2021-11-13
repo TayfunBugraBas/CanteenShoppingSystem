@@ -2,6 +2,10 @@
 
 FileWorks fileworker;
 
+StoragePersonel::StoragePersonel()
+{
+}
+
 void StoragePersonel::addNewUrun(Urun urun)
 {
 	urunler.clear();

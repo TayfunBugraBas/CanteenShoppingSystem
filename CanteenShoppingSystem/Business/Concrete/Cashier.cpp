@@ -2,7 +2,11 @@
 
 FileWorks fileworkertwo;
 
-void Cashier::sellUrun(Urun urun)
+Cashier::Cashier()
+{
+}
+
+void Cashier::sellUrun(string urun)
 {
 	urunler.clear();
 	fileworkertwo.FillObject(urunler);
@@ -19,9 +23,9 @@ void Cashier::sellUrun(Urun urun)
 
 		for (auto _urun : urunler) {
 
-			if (urun.getIsim() == _urun.getIsim()) {
+			if (urun == _urun.getIsim()) {
 
-				_amount = urun.getAmount();
+				_amount = _urun.getAmount();
 
 				_amount = _amount - 1;/*Deðiþebilir Kýsým*/
 
@@ -34,11 +38,12 @@ void Cashier::sellUrun(Urun urun)
 				if (changer == "t") {
 					newitemTF = true;
 					cout << "Enter other product name :" << endl;
-					cin >> otheritemName;
-					urun.setIsim(otheritemName);
+					cin >> urun;
+					
 					sellUrun(urun);
 				}
 				else if (changer == "f") {
+					newitemTF = false;
 					/*Ne yapýlacak bul yaz*/
 				}
 				else {
@@ -59,7 +64,7 @@ void Cashier::sellUrun(Urun urun)
 		cout << "Toplam odenecek tutar: " << Pricing << endl;
 }
 
-void Cashier::givebackUrun(Urun urun)
+void Cashier::givebackUrun(string urun)
 {
 	urunler.clear();
 	fileworkertwo.FillObject(urunler);
@@ -74,9 +79,9 @@ void Cashier::givebackUrun(Urun urun)
 
 		for (auto _urun : urunler) {
 
-			if (urun.getIsim() == _urun.getIsim()) {
+			if (urun == _urun.getIsim()) {
 
-				_amount = urun.getAmount();
+				_amount = _urun.getAmount();
 
 				_amount = _amount + 1;/*Deðiþebilir Kýsým*/
 
@@ -90,13 +95,13 @@ void Cashier::givebackUrun(Urun urun)
 				if (changer == "t") {
 					newitemTF = true;
 					cout << "Enter other product name :" << endl;
-					cin >> otheritemName;
-					urun.setIsim(otheritemName);
+					cin >> urun;
+					
 					givebackUrun(urun);
 
 				}
 				else if (changer == "f") {
-					/*Ne yapýlacak bul yaz*/
+					newitemTF = false;
 				}
 				else {
 					cout << "You returned wrong please try again" << endl;

@@ -17,6 +17,7 @@ public:
 	StoragePersonel(string rnk, string name, int id, double salary) : Employee(rnk, name, id, salary) {
 
 	}
+	StoragePersonel();
 
 	vector<Urun> urunler;
 

@@ -1,5 +1,9 @@
 #include "Employee.h"
 
+Employee::Employee()
+{
+	
+}
 
 Employee::Employee(string _employeeRank,string _name ,int empId, double _salary) {
 

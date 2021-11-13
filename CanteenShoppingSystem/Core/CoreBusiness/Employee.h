@@ -17,6 +17,7 @@ public:
 
 
 	Employee(string,string, int, double);
+	Employee();
 
 	void setName(string);
 	string getName();
