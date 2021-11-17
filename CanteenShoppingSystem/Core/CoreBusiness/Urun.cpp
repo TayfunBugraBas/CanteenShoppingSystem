@@ -1,13 +1,13 @@
 
 #include "Urun.h"
 
-Urun::Urun(string isim, string kategori, string tip, double ucret, int id, int _amount)
+Urun::Urun(string isim, string kategori, string tip, int id , double ucret, int _amount)
 {
     urunIsmi = isim;
     urunKategori = kategori;
     urunTipi = tip;
-    fiyat = ucret;
     urunId = id;
+    fiyat = ucret;
     amount = _amount;
 }
 

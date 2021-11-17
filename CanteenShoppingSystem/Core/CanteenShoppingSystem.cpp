@@ -24,10 +24,10 @@ void menu() {
     StoragePersonel personel;
 
     
-    cout << "--------Canteen Shopping System--------\n\n" << "---Select User\n 1) Manager\n 2) Worker" << endl;
+    cout << "--------Canteen Shopping System--------\n\n" << "---Select User\n 1) Manager (Key required)\n 2)Personel (Key required)\n 3) Guest" << endl;
     cin >> i;
     switch (i) {
-    case 1:
+    case 10768:
         system("CLS");
         cout << "-----Hello Manager----- "<<endl<<"What are you looking for ?  "<<endl<<"1)ProductPricing\n2)new Worker \n3)WorkerSalarySetting" << endl;
         cin >> i;
@@ -119,7 +119,7 @@ void menu() {
        /*End of the manager menu*/
 
     case 2:
-        cout << "--------Hello Worker--------\n\n" << "---Select Department\n 1)Cashier \n 2) Storage" << endl;
+        cout << "--------Hello User--------\n\n" << " \n 1)Shopping Cart \n" << endl;
         cin >> i;
         if (i == 1) {
             cout << "What do you want to do ? \n\n" << "1)Sell Product \n 2)take back Product";
@@ -132,6 +132,9 @@ void menu() {
                     cin >> nameOfThing;
                 }
                 cashier.sellUrun(nameOfThing);
+                cout << "Completed Successfully" << endl;
+                system("pause");
+                menu();/*hata var bak*/
 
             }
             else if (i == 2) {
@@ -142,6 +145,9 @@ void menu() {
                     cin >> nameOfThing;
                 }
                 cashier.givebackUrun(nameOfThing);
+                cout << "Completed Successfully" << endl;
+                system("pause");
+                menu();
 
             }
             else {
@@ -150,7 +156,8 @@ void menu() {
                 menu();
             }
         }
-        else if (i == 2) {
+
+    case 20768:  
             cout << "What do you want to do ? \n\n" << "1)AddNewProduct \n 2)DeleteProduct\n 3)UpdateProduct" << endl;
             cin >> i;
             if (i == 1) {
@@ -215,21 +222,19 @@ void menu() {
                 system("CLS");
                 menu();
             }
-        }
-        else {
-                  cout << "something gone wrong returning main menu" << endl;
-               system("CLS");
-            menu();
-        }
-
 
     default:
         cout << "something gone wrong " << endl;
+        }
+        
+
+
+   
        
 
     }
     
-}
+
 
 
 int main()

@@ -113,7 +113,7 @@ void FileWorks::FillObject(vector<Urun>& urunler)
 
 		
 
-		Urun helperUrun(helperUrunIsmi, helperUrunKategori, helperUrunTipi, helperFiyat, helperAmount, helperUrunId);
+		Urun helperUrun(helperUrunIsmi, helperUrunTipi, helperUrunKategori, helperUrunId , helperFiyat , helperAmount);
 
 		urunler.push_back(helperUrun);
 

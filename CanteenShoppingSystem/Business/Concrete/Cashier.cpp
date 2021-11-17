@@ -10,8 +10,8 @@ void Cashier::sellUrun(string urun)
 {
 	urunler.clear();
 	fileworkertwo.FillObject(urunler);
-	int i = 0;
-	int _amount;
+	unsigned int i = 0;
+	int _amount= 0;
 	double Pricing = 0.00;
 	string otheritemName;
 	string changer;
@@ -21,55 +21,57 @@ void Cashier::sellUrun(string urun)
 
 	while (newitemTF == true) {
 
-		for (auto _urun : urunler) {
+		for (i = 0; i < urunler.size();i++) {
 
-			if (urun == _urun.getIsim()) {
+			if (urun == urunler[i].getIsim()) {
 
-				_amount = _urun.getAmount();
+				_amount = urunler[i].getAmount()-1;
 
-				_amount = _amount - 1;/*Deðiþebilir Kýsým*/
+				urunler[i].setAmount(_amount);
 
-				_urun.setAmount(_amount);
+				Pricing = urunler[i].getFiyat() + Pricing;
+				
 
-				Pricing = _urun.getFiyat() + Pricing;
-
-				cout << "Do you want to continue ? (t/f)" << endl;
+				cout << "Do you want to continue Shopping? (t/f)" << endl;
 				cin >> changer;
-				if (changer == "t") {
+				if (changer == "t" || changer == "T") {
 					newitemTF = true;
 					cout << "Enter other product name :" << endl;
 					cin >> urun;
 					
-					sellUrun(urun);
+					
+					
 				}
-				else if (changer == "f") {
+				else if (changer == "f" || changer == "F") {
 					newitemTF = false;
-					/*Ne yapýlacak bul yaz*/
+					
+					
 				}
 				else {
 					cout << "You returned wrong please try again" << endl;
 					cin >> changer;
 				}
 
+				
 				remove("Storage.txt");
 				fileworkertwo.saveUrun(urunler);
-
 
 
 			}
 			
 		}
+		
 
 	}
-		cout << "Toplam odenecek tutar: " << Pricing << endl;
+	cout << "Toplam odenecek tutar: " << Pricing << endl;
 }
 
 void Cashier::givebackUrun(string urun)
 {
 	urunler.clear();
 	fileworkertwo.FillObject(urunler);
-	int i = 0;
-	int _amount;
+	unsigned int i = 0;
+	int _amount = 0;
 	string otheritemName;
 	string changer;
 	double Pricing = 0.00;
@@ -77,31 +79,32 @@ void Cashier::givebackUrun(string urun)
 
 	while (newitemTF == true) {
 
-		for (auto _urun : urunler) {
+		for (i = 0; i < urunler.size();i++) {
 
-			if (urun == _urun.getIsim()) {
+			if (urun == urunler[i].getIsim()) {
 
-				_amount = _urun.getAmount();
-
-				_amount = _amount + 1;/*Deðiþebilir Kýsým*/
+				_amount = urunler[i].getAmount()+1;
 
 
-				_urun.setAmount(_amount);
+				urunler[i].setAmount(_amount+1);
 
-				Pricing = _urun.getFiyat() - Pricing;
+				Pricing = urunler[i].getFiyat() - Pricing;
+			
 
-				cout << "Do you want to continue ? (t/f)" << endl;
+				cout << "Do you want to continue Shopping? (t/f)" << endl;
 				cin >> changer;
-				if (changer == "t") {
+				if (changer == "t"|| changer =="T") {
 					newitemTF = true;
 					cout << "Enter other product name :" << endl;
 					cin >> urun;
 					
-					givebackUrun(urun);
-
+					
+					
 				}
-				else if (changer == "f") {
+				else if (changer == "f" || changer == "F") {
+					
 					newitemTF = false;
+					
 				}
 				else {
 					cout << "You returned wrong please try again" << endl;
@@ -116,7 +119,7 @@ void Cashier::givebackUrun(string urun)
 
 			
 		}
+		
 	}
-		cout << "Toplam geri iade: " << Pricing << endl;
-
+	cout << "Toplam geri iade: " << Pricing << endl;
 }

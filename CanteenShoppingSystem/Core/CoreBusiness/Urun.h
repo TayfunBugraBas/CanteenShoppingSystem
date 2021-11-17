@@ -17,7 +17,7 @@ public:
 
 	
 
-	Urun(string, string, string, double, int,int);
+	Urun(string, string, string, int,double,int);
 
 	void setIsim(string);
 	string getIsim();
