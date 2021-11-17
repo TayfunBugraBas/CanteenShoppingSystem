@@ -50,3 +50,19 @@ void Manager::newWorker(Employee employee)
 
 }
 
+void Manager::deleteWorker(Employee employee)
+{
+	fileHelper.fillWorker(vemployee);
+
+	for (unsigned int i = 0; i < vemployee.size(); i++) {
+
+		if (employee.getName() == vemployee[i].getName()) {
+			vemployee.erase(begin(vemployee) + i);
+		}
+		remove("Employee.txt");
+		fileHelper.saveWorker(vemployee);
+
+	}
+
+}
+

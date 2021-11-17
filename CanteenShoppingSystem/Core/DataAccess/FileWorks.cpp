@@ -49,7 +49,7 @@ void FileWorks::getAllObject()
 	FillObject(Getir);
 	for (auto _urun : Getir) {
 
-		cout << endl << _urun.getIsim() << "  " << _urun.getKategori() << "  " << _urun.getTipi() << "  " << _urun.getFiyat() << _urun.getAmount() << "  " << _urun.getId() << endl;
+		cout << endl <<" \nUrun ismi: "<<_urun.getIsim() << " \nUrun Kategori: " << _urun.getKategori() << " \n Urun Tipi: " << _urun.getTipi() << " \n Urun Id: " << _urun.getId() <<" \nUrun Fiyat: "<<_urun.getFiyat() << " \n Urun miktar: " <<   _urun.getAmount() << endl;
 
 	}
 

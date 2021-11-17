@@ -1,6 +1,2 @@
-﻿  Cashier.cpp
-  CanteenShoppingSystem.cpp
-D:\projects\CanteenShoppingSystem\CanteenShoppingSystem\Core\CanteenShoppingSystem.cpp(175,57): warning C4244: 'bağımsız değişken': 'double' - 'int' dönüşümü; veri kaybı olabilir
-D:\projects\CanteenShoppingSystem\CanteenShoppingSystem\Core\CanteenShoppingSystem.cpp(186,62): warning C4244: 'bağımsız değişken': 'double' - 'int' dönüşümü; veri kaybı olabilir
-  Kod Üretiliyor...
+﻿  FileWorks.cpp
   CanteenShoppingSystem.vcxproj -> D:\projects\CanteenShoppingSystem\Debug\CanteenShoppingSystem.exe

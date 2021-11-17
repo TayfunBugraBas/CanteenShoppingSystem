@@ -52,3 +52,8 @@ void StoragePersonel::updateUrun(string urun,string newname,string kategori, str
 	fileworker.saveUrun(urunler);
 
 }
+
+void StoragePersonel::getAllProducts()
+{
+	fileworker.getAllObject();
+}

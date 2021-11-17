@@ -22,14 +22,15 @@ void menu() {
     Manager manager;
     Cashier cashier;
     StoragePersonel personel;
+    
 
     
-    cout << "--------Canteen Shopping System--------\n\n" << "---Select User\n 1) Manager (Key required)\n 2)Personel (Key required)\n 3) Guest" << endl;
+    cout << "--------Canteen Shopping System--------\n\n" << "---Select User\n1) Manager (Key required)\n2) Guest \n3)Personel(Key required)" << endl;
     cin >> i;
     switch (i) {
     case 10768:
         system("CLS");
-        cout << "-----Hello Manager----- "<<endl<<"What are you looking for ?  "<<endl<<"1)ProductPricing\n2)new Worker \n3)WorkerSalarySetting" << endl;
+        cout << "-----Hello Manager----- "<<endl<<"What are you looking for ?  "<<endl<<"1)ProductPricing\n2)new Worker \n3)WorkerSalarySetting \n4)Delete Worker" << endl;
         cin >> i;
         if ( i == 1)
         {
@@ -111,6 +112,16 @@ void menu() {
 
 
         }
+        else if (i==4){
+            cout << "enter worker name please" << endl;
+            cin >> nameOfThing;
+           Employee employee("NULL", nameOfThing, 0, 0.00);
+           manager.deleteWorker(employee);
+           cout << "Completed Successfully" << endl;
+           system("CLS");
+           menu();
+
+        }
         else {
                  cout << "something gone wrong returning main menu" << endl;
               system("CLS");
@@ -119,7 +130,7 @@ void menu() {
        /*End of the manager menu*/
 
     case 2:
-        cout << "--------Hello User--------\n\n" << " \n 1)Shopping Cart \n" << endl;
+        cout << "--------Hello User--------\n\n" << " \n 1)Shopping Cart  \n 2)List Products" << endl;
         cin >> i;
         if (i == 1) {
             cout << "What do you want to do ? \n\n" << "1)Sell Product \n 2)take back Product";
@@ -134,7 +145,7 @@ void menu() {
                 cashier.sellUrun(nameOfThing);
                 cout << "Completed Successfully" << endl;
                 system("pause");
-                menu();/*hata var bak*/
+                menu();
 
             }
             else if (i == 2) {
@@ -156,6 +167,19 @@ void menu() {
                 menu();
             }
         }
+        else if (i == 2) {
+
+            personel.getAllProducts();
+            system("pause");
+            system("ClS");
+            menu();
+
+        }
+        else {
+            cout << "something gone wrong returning main menu" << endl;
+            system("CLS");
+            menu();
+        }
 
     case 20768:  
             cout << "What do you want to do ? \n\n" << "1)AddNewProduct \n 2)DeleteProduct\n 3)UpdateProduct" << endl;
@@ -173,7 +197,7 @@ void menu() {
                 cin >> idOfThing;
                 cout << "enter amount pf product" << endl;
                 cin >> amount;
-                Urun xurun(nameOfThing, category, type, Pricing, idOfThing, amount);
+                Urun xurun(nameOfThing, category, type, idOfThing, Pricing , amount);
                 personel.addNewUrun(xurun);
 
                 cout << "Completed Successfully" << endl;
@@ -184,7 +208,7 @@ void menu() {
             else if (i == 2) {
                 cout << "enter product name please" << endl;
                 cin >> nameOfThing;
-                Urun deleteUrun(nameOfThing, "NULL", "NULL", 0.00, 0, 0);
+                Urun deleteUrun(nameOfThing, "NULL", "NULL", 0, 0.00, 0);
                 personel.deleteUrun(deleteUrun);
 
                 cout << "Completed Successfully" << endl;
@@ -227,10 +251,6 @@ void menu() {
         cout << "something gone wrong " << endl;
         }
         
-
-
-   
-       
 
     }
     

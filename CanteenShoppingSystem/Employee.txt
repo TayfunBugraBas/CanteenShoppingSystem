@@ -2,7 +2,3 @@ fsd
 Cashier
 4
 4578
-bgr
-Cashier
-4
-5000

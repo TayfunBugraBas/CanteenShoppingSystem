@@ -24,6 +24,8 @@ public:
 
     void newWorker(Employee employee);
 
+	void deleteWorker(Employee employee);
+
 	
 };
 

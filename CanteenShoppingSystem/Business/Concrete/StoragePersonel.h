@@ -27,6 +27,8 @@ public:
 
 	void updateUrun(string urun, string newname, string kategori, string type, double price, int newid, int newamount);
 
+	void getAllProducts();
+
 
 
 
