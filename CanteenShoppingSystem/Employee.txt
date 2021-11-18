@@ -2,3 +2,11 @@ fsd
 Cashier
 4
 4578
+asd
+StoragePersonel
+12
+0
+dbr
+Cashier
+0
+0
