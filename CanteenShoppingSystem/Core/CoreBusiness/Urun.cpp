@@ -1,7 +1,7 @@
 
 #include "Urun.h"
 
-Urun::Urun(string isim, string kategori, string tip, int id , double ucret, int _amount)
+Urun::Urun(string isim, string tip , string kategori, int id , double ucret, int _amount)
 {
     urunIsmi = isim;
     urunKategori = kategori;

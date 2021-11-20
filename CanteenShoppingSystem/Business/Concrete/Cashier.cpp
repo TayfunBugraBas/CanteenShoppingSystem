@@ -86,7 +86,7 @@ void Cashier::givebackUrun(string urun)
 				_amount = urunler[i].getAmount()+1;
 
 
-				urunler[i].setAmount(_amount+1);
+				urunler[i].setAmount(_amount);
 
 				Pricing = urunler[i].getFiyat() - Pricing;
 			

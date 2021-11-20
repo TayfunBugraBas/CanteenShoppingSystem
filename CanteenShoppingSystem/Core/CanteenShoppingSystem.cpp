@@ -40,6 +40,9 @@ void menu() {
             cout << "enter newPrice of the Product please" << endl;
                 cin >> Pricing;
                   manager.setProductPrice(nameOfThing, Pricing);
+                  cout << "Completed Successfully" << endl;
+                  system("CLS");
+                  menu();
 
         }
         else if (i == 2) {
@@ -96,10 +99,7 @@ void menu() {
                    system("CLS");
                 menu();
             }
-            else if (i == -1) {
-                system("CLS");
-                menu();
-            }
+            
             else {
                      cout << "something gone wrong returning main menu" << endl;
                    system("CLS");
@@ -117,7 +117,9 @@ void menu() {
                         cin >> salaryOfEmp;
                     }
                   manager.setWorkerSalary(nameOfThing, salaryOfEmp);
-
+                  cout << "Completed Successfully" << endl;
+                  system("CLS");
+                  menu();
 
         }
         else if (i==4){
@@ -130,6 +132,10 @@ void menu() {
            menu();
 
         }
+        else if (i == -1) {
+            system("CLS");
+            menu();
+        }
         else {
                  cout << "something gone wrong returning main menu" << endl;
               system("CLS");
@@ -138,7 +144,8 @@ void menu() {
        /*End of the manager menu*/
 
     case 2:
-        cout << "--------Hello User--------\n\n" << " \n 1)Shopping Cart  \n 2)List Products -1)go back" << endl;
+        system("CLS");
+        cout << "--------Hello User--------\n\n" << " \n 1)Shopping Cart  \n 2)List Products \n-1)go back" << endl;
         cin >> i;
         if (i == 1) {
             cout << "What do you want to do ? \n\n" << "1)get Product \n 2)give  back Product";
@@ -153,6 +160,7 @@ void menu() {
                 cashier.sellUrun(nameOfThing);
                 cout << "Completed Successfully" << endl;
                 system("pause");
+                system("CLS");
                 menu();
 
             }
@@ -166,6 +174,7 @@ void menu() {
                 cashier.givebackUrun(nameOfThing);
                 cout << "Completed Successfully" << endl;
                 system("pause");
+                system("CLS");
                 menu();
 
             }
@@ -194,7 +203,8 @@ void menu() {
         }
 
     case 20768:  
-            cout << "What do you want to do ? \n\n" << "1)AddNewProduct \n 2)DeleteProduct\n 3)UpdateProduct\n -1) go back" << endl;
+        system("CLS");
+            cout <<"----Hello Worker---- \n" <<"What do you want to do ? \n\n" << "1)AddNewProduct \n 2)DeleteProduct\n 3)UpdateProduct\n -1) go back" << endl;
             cin >> i;
             if (i == 1) {
                 cout << "enter product name please"<< endl;
