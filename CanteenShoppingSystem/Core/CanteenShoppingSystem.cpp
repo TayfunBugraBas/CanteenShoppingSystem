@@ -154,7 +154,7 @@ void menu() {
                 cout << "enter product name for add to cart " << endl;
                 cin >> nameOfThing;
                 if (nameOfThing.size() <= 0) {
-                    cout << "you didnt enter anything try again" << endl;
+         
                     cin >> nameOfThing;
                 }
                 cashier.sellUrun(nameOfThing);
@@ -168,10 +168,11 @@ void menu() {
                 cout << "enter product name for giving back" << endl;
                 cin >> nameOfThing;
                 if (nameOfThing.size() <= 0) {
-                    cout << "you didnt enter anything try again" << endl;
+                    
                     cin >> nameOfThing;
                 }
                 cashier.givebackUrun(nameOfThing);
+                
                 cout << "Completed Successfully" << endl;
                 system("pause");
                 system("CLS");

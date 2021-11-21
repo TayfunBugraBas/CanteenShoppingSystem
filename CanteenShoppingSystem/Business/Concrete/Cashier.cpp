@@ -30,7 +30,7 @@ void Cashier::sellUrun(string urun)
 				urunler[i].setAmount(_amount);
 
 				Pricing = urunler[i].getFiyat() + Pricing;
-				
+
 
 				cout << "Do you want to continue Shopping? (t/f)" << endl;
 				cin >> changer;
@@ -57,6 +57,12 @@ void Cashier::sellUrun(string urun)
 				fileworkertwo.saveUrun(urunler);
 
 
+			}
+			else {
+				newitemTF = false;
+				break;
+				cout << "There is nothing like this product  " << endl;
+				
 			}
 			
 		}
@@ -115,6 +121,12 @@ void Cashier::givebackUrun(string urun)
 				fileworkertwo.saveUrun(urunler);
 
 
+			}
+			else {
+				newitemTF = false;
+				break;
+				cout << "There is nothing like this product " << endl;
+				
 			}
 
 			
