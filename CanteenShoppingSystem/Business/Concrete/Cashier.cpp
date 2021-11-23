@@ -58,12 +58,7 @@ void Cashier::sellUrun(string urun)
 
 
 			}
-			else {
-				newitemTF = false;
-				break;
-				cout << "There is nothing like this product  " << endl;
-				
-			}
+			
 			
 		}
 		
@@ -122,12 +117,7 @@ void Cashier::givebackUrun(string urun)
 
 
 			}
-			else {
-				newitemTF = false;
-				break;
-				cout << "There is nothing like this product " << endl;
-				
-			}
+			
 
 			
 		}

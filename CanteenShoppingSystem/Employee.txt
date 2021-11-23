@@ -6,3 +6,7 @@ asd
 Cashier
 12
 5000
+avc
+Cashier
+5
+0
