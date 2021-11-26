@@ -66,3 +66,8 @@ void Manager::deleteWorker(Employee employee)
 
 }
 
+void Manager::listWorkers()
+{
+	fileHelper.getAllWorker();
+}
+

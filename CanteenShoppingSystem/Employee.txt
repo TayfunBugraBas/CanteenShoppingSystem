@@ -10,3 +10,11 @@ avc
 Cashier
 5
 0
+llk
+Cashier
+5
+4500
+klj
+StoragePersonel
+57
+1000

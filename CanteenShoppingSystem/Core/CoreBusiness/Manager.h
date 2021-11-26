@@ -26,6 +26,8 @@ public:
 
 	void deleteWorker(Employee employee);
 
+	void listWorkers();
+
 	
 };
 

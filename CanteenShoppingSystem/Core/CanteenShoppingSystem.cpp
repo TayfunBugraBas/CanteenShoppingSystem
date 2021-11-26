@@ -32,7 +32,7 @@ void menu() {
     cin >> i;
     if (i == 10768) {
          system("CLS");
-         cout << "-----Hello Manager----- "<<endl<<"What are you looking for ?  "<<endl<<"1)ProductPricing\n2)new Worker \n3)WorkerSalarySetting \n4)Delete Worker \n-1)go back" << endl;
+         cout << "-----Hello Manager----- "<<endl<<"What are you looking for ?  "<<endl<<"1)ProductPricing\n2)new Worker \n3)WorkerSalarySetting \n4)Delete Worker\n5)ListOfWorkers \n-1)go back" << endl;
          cin >> a;
          if ( a == 1)
          {
@@ -54,7 +54,7 @@ void menu() {
              if (a == 1 )
              {
                  rankOfEmp = "Cashier";
-                 cout << "Enter name";
+                 cout << "Enter name\n";
                  cin >> nameOfThing;
                  cout << "enter id";
                     cin >> idOfThing;
@@ -137,6 +137,12 @@ void menu() {
             system("CLS");
             menu();
             a = 0;
+         }
+         else if (a == 5) {
+         manager.listWorkers();
+         system("pause");
+         system("CLS");
+         menu();
          }
          else if (a == -1) {
              system("CLS");
@@ -261,7 +267,7 @@ void menu() {
                  cout << "enter product name please" << endl;
                  cin >> nameOfThing;
                  cout << "enter NEW product name" << endl;
-                 getline(cin, nameHelper);
+                 cin >> nameHelper;
                  cout << "enter new product category please" << endl;
                  cin >> category;
                  cout << "Enter new product type please" << endl;

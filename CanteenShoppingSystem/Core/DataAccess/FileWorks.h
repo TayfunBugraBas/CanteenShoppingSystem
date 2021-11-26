@@ -31,6 +31,8 @@ public:
 
 	void findUrun(string urun);
 
+	void getAllWorker();
+
 
 
 

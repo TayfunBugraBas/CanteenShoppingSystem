@@ -207,3 +207,17 @@ void FileWorks::findUrun(string urun)
 	}
 
 }
+
+void FileWorks::getAllWorker()
+{
+	vector <Employee> listEmp;
+
+	fillWorker(listEmp);
+	for (unsigned int i = 0; i < listEmp.size(); i++) {
+
+
+		cout <<"isim:" <<listEmp[i].getName() << "\n " << "Rutbe:"<<listEmp[i].getRank() << "\n " <<"ID:" <<listEmp[i].getEmpId() << "\n " << "Maas:"<<listEmp[i].getSalary() << endl<<endl<<endl;
+
+	}
+
+}
