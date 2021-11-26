@@ -55,7 +55,7 @@ void menu() {
              {
                  rankOfEmp = "Cashier";
                  cout << "Enter name";
-                 getline(cin, nameOfThing);
+                 cin >> nameOfThing;
                  cout << "enter id";
                     cin >> idOfThing;
                     if (idOfThing <= 0) {
@@ -82,7 +82,7 @@ void menu() {
 
                  rankOfEmp = "StoragePersonel";
                  cout << "Enter name";
-                   getline(cin, nameOfThing);
+                 cin >> nameOfThing;
                  cout << "enter id";
                     cin >> idOfThing;
                     if (idOfThing <= 0) {
@@ -115,7 +115,7 @@ void menu() {
          }
          else if (a == 3) {
              cout << "Please Enter Your Workers Name Correctly" << endl;
-             getline(cin, nameOfThing);
+             cin >> nameOfThing;
                    cout << "Enter new Salary of Worker" << endl;
                      cin >> salaryOfEmp;
                      if (salaryOfEmp < 0) {
@@ -130,7 +130,7 @@ void menu() {
          }
          else if (a==4){
              cout << "enter worker name please" << endl;
-             getline(cin, nameOfThing);
+             cin >> nameOfThing;
             Employee employee("NULL", nameOfThing, 0, 0.00);
             manager.deleteWorker(employee);
             cout << "Completed Successfully" << endl;
@@ -226,7 +226,7 @@ void menu() {
              cin >> i;
              if (i == 1) {
                  cout << "enter product name please"<< endl;
-                 getline(cin, nameOfThing);
+                 cin>>nameOfThing;
                  cout << "enter product category please" << endl;
                  cin >> category;
                  cout << "Enter product type please" << endl;
@@ -237,7 +237,7 @@ void menu() {
                  cin >> idOfThing;
                  cout << "enter amount pf product" << endl;
                  cin >> amount;
-                 Urun xurun(nameOfThing, category, type, idOfThing, Pricing , amount);
+                 Urun xurun(nameOfThing, type, category, idOfThing, Pricing , amount);
                  personel.addNewUrun(xurun);
 
                  cout << "Completed Successfully" << endl;
@@ -247,7 +247,7 @@ void menu() {
              }
              else if (i == 2) {
                  cout << "enter product name please" << endl;
-                 getline(cin, nameOfThing);
+                 cin >> nameOfThing;
                  Urun deleteUrun(nameOfThing, "NULL", "NULL", 0, 0.00, 0);
                  personel.deleteUrun(deleteUrun);
 
@@ -259,7 +259,7 @@ void menu() {
              else if(i == 3)
              {
                  cout << "enter product name please" << endl;
-                 getline(cin, nameOfThing);
+                 cin >> nameOfThing;
                  cout << "enter NEW product name" << endl;
                  getline(cin, nameHelper);
                  cout << "enter new product category please" << endl;
@@ -273,7 +273,7 @@ void menu() {
                  cout << "enter  new amount pf product" << endl;
                  cin >> amount;
 
-                 personel.updateUrun(nameOfThing, nameHelper, category, type, Pricing, idOfThing, amount);
+                 personel.updateUrun(nameOfThing, nameHelper, type, category, Pricing, idOfThing, amount);
 
                  cout << "Completed Successfully" << endl;
                  system("CLS");
