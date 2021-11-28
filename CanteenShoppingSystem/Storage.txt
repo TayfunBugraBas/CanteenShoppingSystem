@@ -3,7 +3,7 @@ sda
 dsa
 457
 3
-6
+8
 jkl
 klj
 lkj
@@ -16,3 +16,9 @@ klb
 8
 12.34
 40
+xcc
+zxx
+ccz
+0
+0
+0

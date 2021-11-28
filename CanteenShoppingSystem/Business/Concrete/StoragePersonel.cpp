@@ -24,6 +24,9 @@ void StoragePersonel::deleteUrun(Urun urun)
 
 			urunler.erase(begin(urunler) + i);
 		}
+		else {
+			cout << "urun yok " << endl;
+		}
 	}
 	remove("Storage.txt");
 	fileworker.saveUrun(urunler);
@@ -44,6 +47,9 @@ void StoragePersonel::updateUrun(string urun,string newname,string kategori, str
 			urunler[i].setAmount(newamount);
 			urunler[i].setId(newid);
 
+		}
+		else {
+			cout << "urun yok " << endl;
 		}
 		
 

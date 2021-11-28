@@ -34,6 +34,9 @@ void Manager::setWorkerSalary(string employee, double newsalary)
 		{
 			vemployee.at(i).setSalary(newsalary);
 		}
+		else {
+			cout << "kisi yok" << endl;
+		}
 		
 	}
 	

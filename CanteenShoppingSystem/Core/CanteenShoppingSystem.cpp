@@ -118,7 +118,7 @@ void menu() {
              cin >> nameOfThing;
                    cout << "Enter new Salary of Worker" << endl;
                      cin >> salaryOfEmp;
-                     if (salaryOfEmp < 0) {
+                     if (salaryOfEmp <= 0) {
                          cout << "You cant enter below 0 salary please enter salary again" << endl;
                          cin >> salaryOfEmp;
                      }
