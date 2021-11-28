@@ -63,3 +63,9 @@ void StoragePersonel::getAllProducts()
 {
 	fileworker.getAllObject();
 }
+
+void StoragePersonel::findProduct(string urun)
+{
+	fileworker.findUrun(urun);
+
+}

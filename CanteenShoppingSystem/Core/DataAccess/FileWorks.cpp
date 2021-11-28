@@ -184,6 +184,9 @@ void FileWorks::FindWorker(string worker)
 
 			cout << find.getName() << " " << find.getRank() << " " << find.getEmpId() << " " << find.getSalary() << endl;
 		}
+		else {
+			cout << "Bulunamadi" << endl;
+		}
 
 	}
 
@@ -201,8 +204,9 @@ void FileWorks::findUrun(string urun)
 		{
 			cout << "Urun bulundu" << endl;
 
-			cout << find.getIsim() << "--Kategori: " << find.getKategori() << "--Tipi:" << find.getTipi() << "--Fiyat:" << find.getFiyat() << "--StokAdeti:" << find.getAmount() << "--ID:" << find.getId() << endl;
+			cout <<"--Ýsim: " <<find.getIsim() <<endl <<"--Kategori: " << find.getKategori() << endl<<"--Tipi:" << find.getTipi() <<endl <<"--Fiyat:" << find.getFiyat() <<endl <<"--StokAdeti:" << find.getAmount() <<endl <<"--ID:" << find.getId() << endl;
 		}
+		
 
 	}
 

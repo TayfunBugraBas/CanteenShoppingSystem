@@ -29,6 +29,8 @@ public:
 
 	void getAllProducts();
 
+	void findProduct(string urun);
+
 
 
 

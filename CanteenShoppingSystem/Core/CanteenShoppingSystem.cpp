@@ -159,7 +159,7 @@ void menu() {
     }
     else if (i == 2) {
           system("CLS");
-          cout << "--------Hello User--------\n\n" << " \n 1)Shopping Cart  \n 2)List Products \n-1)go back" << endl;
+          cout << "--------Hello User--------\n\n" << " \n 1)Shopping Cart  \n 2)List Products \n3)Find Product\n-1)go back" << endl;
           cin >> i;
           if (i == 1) {
               cout << "What do you want to do ? \n\n" << "1)get Product \n 2)give  back Product \n-1)go back";
@@ -193,6 +193,7 @@ void menu() {
                   menu();
 
               }
+             
               else if (i == -1) {
                   system("CLS");
                   menu();
@@ -209,6 +210,16 @@ void menu() {
               personel.getAllProducts();
               system("pause");
               system("ClS");
+              menu();
+
+          }
+          else if (i == 3) {
+              cout << "Enter name for find the product" << endl;
+              cin >> nameOfThing;
+              personel.findProduct(nameOfThing);
+              cout << "Completed Successfully" << endl;
+              system("pause");
+              system("CLS");
               menu();
 
           }
